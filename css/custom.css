@@ -1,0 +1,78 @@
+.__lbl_checkbox {font-size: 1.2rem;display:inline-block;}
+
+.__checkbox {vertical-align: -2px; }
+
+.__contacts_div {
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+}
+
+.__contacts_span {
+    width:  300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.__contacts_input {
+    height: 25px;
+    width: 80px;
+}
+
+.__contacts_number_span {
+    flex: 0.5;
+    margin-left: 10px;
+}
+
+.__contacts_select {
+    flex: 0.5;
+    margin-right: 10px;
+}
+
+.__flex_center {
+    display: flex;
+    align-items: center;
+}
+
+.__flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.__color_green {
+    color:rgba(37, 211, 102);
+}
+
+.__settings_container {
+    width:500px !important; 
+    min-height: 600px;
+    border: 1px solid rgba(37, 211, 102);
+    border-radius: 4px;
+}
+
+.__hidden {
+    display: none;
+}
+
+#oops-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #oops-box a {
+    margin-top: 15px;
+    color: white;
+    border-radius: 5px;
+    background: rgb(35, 164, 85);
+    padding: 5px 15px;
+  }
+  
+  #oops-box a:hover {
+    color: white;
+    background: rgb(58, 189, 108);
+    text-decoration: none;
+  }

@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <script type="text/javascript" src="popup.js"></script>
+    <script type="text/javascript" src="/scripts/lib/moment-with-locales.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css" media="all"> 
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="all">
+</head>
+    <body id="body">
+
+        <div id="oops-box" class="container" style="width: 330px;display: none;">
+            <div class="form-group row">   
+                <img src="/images/logo-WAScraper.png" style="margin: auto; width: 65%;" />
+            </div>
+            <span>OOPS! The active tab doesn't seem to be Whatsapp Web<br><br></span>
+            <a href="https://web.whatsapp.com/" target="_blank">
+              Open Whatsapp Web
+            </a>
+        </div>
+       
+        <div id="main-box" class="container" style="width: 330px;">    
+
+            <div class="form-group row">   
+                <img src="/images/logo-WAScraper.png" style="margin: auto; width: 65%;" />
+            </div>
+            
+            <div id="datesDiv">
+                <div class="form-group row">                    
+                    <label for="firstDate" class="col-sm-2 col-form-label display-4" >From</label>
+                    <div class="col-sm-5">  
+                        <input class="form-control" id="firstDate" name="firstDate" type="date" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <label for="lastDate" class="col-sm-2 col-form-label display-4" >To</label>
+                    <div class="col">
+                        <input class="form-control" id="lastDate" name="lastDate" type="date" /> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="contactsList" class="col-sm-2 col-form-label display-4">Numero/i di telefono o nome utente/gruppo di cui si vuole ottenere le chat</label>
+                <div class="col">
+                  <textarea style="font-size:0.9rem;" rows="2" placeholder="393470123456, Uniba 21-22" class="form-control" id="contactsList" name="contactsList" type="tel"></textarea>
+                </div>
+              </div>
+                       
+
+            <div class="row">
+                <div class="col"> 
+                    <input class="btn btn-secondary ml-3 mt-4 mx-auto display-4" type="submit" name="submit" value="Download" id="download" 
+                style="background-color: rgba(37, 211, 102);"/>
+                </div>
+                <div class="col"> 
+                    <input class="btn btn-secondary ml-3 mt-4 mx-auto display-4" type="submit" name="submit" value="Download all" id="download_all" 
+                style="background-color: rgba(37, 211, 102);"/>
+                </div>
+            </div>
+            
+            <div class="row" id="fullV" style="display: flex;justify-content: center;">
+                <label class="small mt-3" style="color: red;" id="info_lbl"></label>
+            </div>
+           
+            <div class="row" style="color: white;">.</div>
+            
+            <div class="row ml-3 mb-2 fixed-bottom">
+                <div class="ml-3">
+                    <input class="form-check-input" type="checkbox" value="" id="media_cb">
+                    <label class="form-check-label small" for="media_cb">
+                        Scarica Media
+                    </label>
+                </div>
+                
+                <div class="ml-3">
+                    <input class="form-check-input" type="checkbox" value="" id="unmedia_cb">
+                    <label class="form-check-label small" for="skip_cb">
+                        Prova a scaricare media non disponibili
+                    </label>
+                </div>
+                
+            </div>
+          
+        </div>
+        
+          
+    </body>
+</html>

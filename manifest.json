@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Scraper",
+  "description": "Scrape messages and media from WhatsApp Web",
+  "version": "2.0",
+  "icons": {
+    "128": "/images/icon-128.png"
+  },
+  "action":{
+    "default_popup": "/popup/popup.html"
+  },
+  "background":{
+    "service_worker":"background.js"
+  },
+  "content_scripts":
+  [{
+      "css": [ "css/spinkit.css"],
+      "js" : ["scripts/cs.js","scripts/lib/jszip.js", "scripts/lib/FileSaver.js","scripts/lib/crypto-js.min.js"],
+      "matches": [ "https://web.whatsapp.com/" ]
+   }],
+  "web_accessible_resources":
+  [{
+    "resources": ["scripts/injectedWA.js"],
+    "matches": ["https://web.whatsapp.com/*"]
+  }],
+  "permissions": ["storage","activeTab"],
+  "host_permissions":["https://web.whatsapp.com/", "https://jsonip.com/"]
+}
